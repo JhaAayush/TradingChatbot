@@ -1,0 +1,9 @@
+version: "3.1"
+
+stories:
+
+- story: give stock advice
+  steps:
+  - intent: stock_advice
+  - action: action_stock_advice
+

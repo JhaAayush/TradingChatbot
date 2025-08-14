@@ -1,0 +1,117 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yeah
+    - yep
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nah
+    - nope
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: bot_capabilities
+  examples: |
+    - What can you do?
+    - What are you capable of?
+    - How can you help me?
+    - What is your purpose?
+    - What are your functions?
+    - How do you work?
+    - What's your use?
+    - Can you give me stock advice?
+    - What kind of advice can you provide?
+    - What are you good for?
+    - Tell me what you can do.
+    - What's your role here?
+    - How do you get your information?
+    - What is your main function?
+    - Can you help me with my investments?
+    - What services do you offer?
+    - Explain your capabilities.
+    - What's the point of this bot?
+    - What kind of questions can I ask you?
+    - What are you designed for?
+
+- intent: stock_advice
+  examples: |
+    - What stocks should I invest in?
+    - Do you have any advice on which stocks to buy?
+    - What companies should I avoid investing in right now?
+    - Should I buy or sell [Tesla](company)?
+    - Tell me which stocks have a positive outlook.
+    - What's your recommendation for my portfolio?
+    - Give me some stock market advice.
+    - Which companies are looking bad right now?
+    - What's the best stock to buy today?
+    - Do you think I should sell my shares in [Nvidia](company)?
+    - Can you give me a list of companies to consider for investment?
+    - Based on the news, which stocks are performing well?
+    - What's the general sentiment on the market?
+    - Which companies have a negative sentiment?
+    - Suggest some companies for me to invest in.
+    - I want to know which stocks to sell.
+    - What is the current sentiment for [Reliance](company)?
+    - Is it a good time to buy [Google](company) stock?
+    - What are some good investment opportunities?
+    - Can you tell me which companies are currently not worth investing in?
+    - Any suggestions for stock trading?
+    - What's the word on the street about [Apple](company)?
+    - Give me some investment tips.
+    - Which stocks are trending positively?
+    - Help me decide whether to invest in [Microsoft](company).
+    - What's a good company to put my money into?
+    - Should I be concerned about my [Adani](company) stock?
+    - Is the market bullish or bearish right now?
+    - Give me some advice on what to do with my stocks.
+    - I'm looking for a company to invest in with a positive outlook.

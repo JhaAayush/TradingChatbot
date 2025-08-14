@@ -1,0 +1,3 @@
+First run `rasa train`.
+Open 2 powershell windows.
+In one run `rasa run actions` and in the other run `rasa shell`

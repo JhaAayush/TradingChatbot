@@ -1,0 +1,56 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - stock_advice
+  - bot_capabilities
+
+entities:
+  - company
+
+slots:
+  company:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: company
+
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+    - text: "Hi there! How’s your day going?"
+    - text: "Hello! Nice to see you."
+    - text: "Hey! What’s up?"
+
+  utter_goodbye:
+    - text: "Bye!"
+    - text: "Goodbye, take care."
+    - text: "See you later!"
+    - text: "Have a great day, bye!"
+
+  utter_iamabot:
+    - text: "Oh no I am totally NOT a bot! I am a completely real person and my real name is Peter  Lynch and I am here just to give you financial advice because you are so so special!! ."
+
+  utter_capabilities:
+    - text: "I can give you stock trading advice based on news sentiment."
+    - text: "I can help you with investment decisions. I'll let you know which companies have a positive sentiment and which ones have a negative sentiment."
+    - text: "I provide financial advice by analyzing news headlines. I can tell you which stocks to consider buying and which to avoid."
+    - text: "I'll give you investing advice by identifying companies with positive or negative news sentiment."
+    - text: "Based on the latest news, I can suggest which companies to invest in and which to stay away from."
+    - text: "My main purpose is to give you stock advice. I'll analyze news and tell you if the sentiment around a company is good or bad for investment."
+    - text: "I can tell you which stocks are trending positively and which are trending negatively, so you can make informed investment choices."
+    
+
+actions:
+  - action_stock_advice
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
