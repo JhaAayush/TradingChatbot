@@ -7,3 +7,8 @@ stories:
   - intent: stock_advice
   - action: action_stock_advice
 
+
+- story: give company info
+  steps:
+  - intent: company_info
+  - action: action_give_company_info

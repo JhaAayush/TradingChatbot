@@ -115,3 +115,26 @@ nlu:
     - Is the market bullish or bearish right now?
     - Give me some advice on what to do with my stocks.
     - I'm looking for a company to invest in with a positive outlook.
+
+- intent: company_info
+  examples: |
+    - Tell me about [Tesla](company).
+    - What does [Google](company) do?
+    - Who is the CEO of [Microsoft](company)?
+    - What kind of company is [Amazon](company)?
+    - Give me some information about [Apple](company).
+    - Where is [Meta](company) headquartered?
+    - What industry is [Netflix](company) in?
+    - Can you give me some facts about [Twitter](company)?
+    - What is [Reliance](company) known for?
+    - Tell me the history of [Infosys](company).
+    - Who founded [Wipro](company)?
+    - Explain what [TCS](company) does.
+    - What's the main business of [Paytm](company)?
+    - Can you describe [HCL](company)?
+    - What services does [SBI](company) offer?
+    - Give me some details about [ICICI](company).
+    - What is [Flipkart](company)?
+    - Tell me about [Jio](company).
+    - What's [Ola](company]'s main business?
+    - Can you tell me more about [Nvidia](company)?
