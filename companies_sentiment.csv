@@ -1,20 +1,10 @@
 Company,Sentiment,Headline
-Nasdaq,Neutral,"Stock market today: Dow, S&P 500, Nasdaq futures in holding pattern rush of retail earnings rush in view - Yahoo Finance"
-Air Canada,Neutral,Air Canada strike ends after airline and flight attendants reach tentative agreement - CNN
-Home Depot,Neutral,Home Depot maintains full-year forecast even as it misses on earnings for second straight quarter - CNBC
-Intel,Neutral,SoftBank held talks with Intel on buying contract chipmaking business - Financial Times
-Soho House,Neutral,Soho House bought in £2bn deal as Ashton Kutcher joins board - BBC
-AI - Cointelegraph,Neutral,"Bitcoin bull and billionaire files for $250M SPAC targeting DeFi, AI - Cointelegraph"
-ETH Targets,Neutral,"Asia Morning Briefing: Traders Tilt Bearish on August BTC, ETH Targets as Retail Lags Institutions - CoinDesk"
-Retail Lags Institutions - CoinDesk,Neutral,"Asia Morning Briefing: Traders Tilt Bearish on August BTC, ETH Targets as Retail Lags Institutions - CoinDesk"
-FTC,Neutral,"FTC Sues Ticket Resale Company, Alleging Eras Tour Price Gouging Scheme - The Hollywood Reporter"
-Ticket Resale Company,Neutral,"FTC Sues Ticket Resale Company, Alleging Eras Tour Price Gouging Scheme - The Hollywood Reporter"
-Allianz Life,Neutral,Allianz Life data breach affects 1.1 million customers - TechCrunch
-FDA,Neutral,"For kids with Barth syndrome, time is running out, parents say, unless the FDA acts - NBC News"
-NBC News,Neutral,"For kids with Barth syndrome, time is running out, parents say, unless the FDA acts - NBC News"
-Palo Alto Stock Leaps After Earnings,Neutral,Palo Alto Stock Leaps After Earnings. Guidance Was Upbeat. - Barron's
-Barron's,Neutral,Sam Altman Says There’s an AI Bubble. What Wall Street Thinks. - Barron's
-ABC News,Neutral,When could tariff-driven price increases hit shoppers? Experts explain - ABC News
-MTA,Neutral,"MTA to begin digging 2nd Ave. subway in East Harlem, 50 years after project halted - Gothamist"
-Fed,Positive,What to Expect from Fed Chair Powell's Speech on Friday: 3 Key Scenarios - Investopedia
-Speech,Positive,What to Expect from Fed Chair Powell's Speech on Friday: 3 Key Scenarios - Investopedia
+Amazon,Positive,The Amazon Labor Day Sale for 2025 Is Now Live With Early Weekend Deals
+HHS,Neutral,HHS moves to strip thousands of federal health workers of union rights
+Intel,Negative,Trump says Intel CEO agreed to give U.S. government 10% of company
+Waymo,Neutral,New York City gives self-driving taxi firm Waymo the green light on pilot program
+Google,Positive,Google says it dropped the energy cost of AI queries by 33x in one year
+Stellantis,Positive,Stellantis (STLA) Reveals Its New Jeep Cherokee SUV amid Falling Sales
+Cracker Barrel's,Positive,"Cracker Barrel's New Logo Has Right-Wingers Posting About Sydney Sweeney, Finding Jesus"
+Visa,Neutral,Visa Abandons Open Banking in US as Data-Access Debate Rages
+iRobot Corporation,Negative,IRBT Lawsuit Alert! Class Action Lawsuit Against iRobot Corporation

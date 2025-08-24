@@ -1,0 +1,11 @@
+{
+  "0": "affirm",
+  "1": "bot_capabilities",
+  "2": "bot_challenge",
+  "3": "company_info",
+  "4": "deny",
+  "5": "direct_stock_action",
+  "6": "goodbye",
+  "7": "greet",
+  "8": "stock_advice"
+}

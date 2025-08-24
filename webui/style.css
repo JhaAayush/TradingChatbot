@@ -1,0 +1,110 @@
+/* We are primarily using Tailwind CSS via CDN, but here's where you can add custom styles. */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom scrollbar for a cleaner look */
+#chat-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+#chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#chat-messages::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 163, 175, 0.5); /* gray-400 with opacity */
+    border-radius: 20px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+}
+
+.dark #chat-messages::-webkit-scrollbar-thumb {
+    background-color: rgba(107, 114, 128, 0.5); /* gray-500 with opacity */
+}
+
+
+/* Chat bubble styling */
+.message {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: flex-end;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message.bot {
+    justify-content: flex-start;
+}
+
+.message .bubble {
+    max-width: 75%;
+    padding: 0.75rem 1rem;
+    border-radius: 1.25rem;
+    word-wrap: break-word;
+}
+
+.message.user .bubble {
+    background-color: #3b82f6; /* blue-500 */
+    color: white;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.message.bot .bubble {
+    background-color: #e5e7eb; /* gray-200 */
+    color: #1f2937; /* gray-800 */
+    border-bottom-left-radius: 0.25rem;
+}
+
+.dark .message.bot .bubble {
+    background-color: #374151; /* gray-700 */
+    color: #f3f4f6; /* gray-100 */
+}
+
+/* Add a small avatar space */
+.message .avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #d1d5db; /* gray-300 */
+    margin-right: 0.75rem;
+}
+
+.dark .message .avatar {
+    background-color: #4b5563; /* gray-600 */
+}
+
+.message.user .avatar {
+    margin-right: 0;
+    margin-left: 0.75rem;
+    background-color: #93c5fd; /* blue-300 */
+}
+
+/* Typing indicator animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(0.9);
+    }
+}
+
+.animate-pulse {
+    animation: pulse 1.4s infinite ease-in-out;
+}
+
+/* Dark mode class for the body */
+.dark-theme {
+    /* Tailwind's dark mode is handled by the 'dark' class on the html/body tag */
+}
+
+/* Make the send button rotate on hover */
+#send-button:hover svg {
+    transform: rotate(15deg) scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}

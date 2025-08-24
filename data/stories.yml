@@ -12,3 +12,8 @@ stories:
   steps:
   - intent: company_info
   - action: action_give_company_info
+
+- story: should i invest in
+  steps:
+  - intent: direct_stock_action
+  - action: action_direct_stock_action

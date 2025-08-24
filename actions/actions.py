@@ -2,6 +2,8 @@ import pandas as pd
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import finnhub
+from news_scraper import get_sentiment
+import requests
 
 CSV_PATH = "companies_sentiment.csv"
 
@@ -46,10 +48,6 @@ class ActionStockAdvice(Action):
 
 
 
-import requests
-from rasa_sdk import Action, Tracker
-from rasa_sdk.executor import CollectingDispatcher
-import finnhub
 
 NEWS_API_KEY = "d3ac6eee157a42e4abda6f20c5aa9e89"
 NEWS_URL_TEMPLATE = "https://newsapi.org/v2/everything?q={company_name}&apiKey=" + NEWS_API_KEY
@@ -136,5 +134,67 @@ class ActionGiveCompanyInfo(Action):
         except Exception as e:
             dispatcher.utter_message(text=f"Sorry, I couldn't fetch company data due to an error: {str(e)}.")
 
+        return []
+
+
+class ActionDirectStockAction(Action):
+    def name(self):
+        return "action_direct_stock_action"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker, domain: dict):
+
+        company = tracker.get_slot("company")
+        if not company:
+            dispatcher.utter_message(text="Please specify the company you'd like advice on.")
+            return []
+
+        # --- Fetch news headlines
+        news_url = NEWS_URL_TEMPLATE.format(company_name=company)
+        try:
+            response = requests.get(news_url)
+            data = response.json()
+            articles = data.get("articles", [])
+        except Exception as e:
+            dispatcher.utter_message(text=f"Sorry, I couldn't fetch news for {company}.")
+            return []
+
+        sentiment_counts = {"Positive": 0, "Neutral": 0, "Negative": 0}
+        headline_sentiments = []
+        num_processed = 0
+
+        for article in articles[:10]:  # analyze up to 10 headlines for speed
+            title = article.get('title')
+            if not title:
+                continue
+            # Clean headline: drop last ' - ...' and trailing spaces
+            idx = title.rfind(' - ')
+            if idx != -1:
+                title = title[:idx]
+            title = title.rstrip()
+            sentiment = get_sentiment(title)
+            sentiment_counts[sentiment] += 1
+            headline_sentiments.append((title, sentiment))
+            num_processed += 1
+
+        # --- Build reply based on majority sentiment
+        if num_processed == 0:
+            dispatcher.utter_message(text=f"Sorry, I couldn't find relevant news for {company}.")
+            return []
+
+        pos, neu, neg = sentiment_counts["Positive"], sentiment_counts["Neutral"], sentiment_counts["Negative"]
+        if pos > neg:
+            advice = f"Based on recent news sentiment, YES, you can invest in {company}."
+        elif neg > pos:
+            advice = f"Based on recent news sentiment, you should NOT invest in {company}."
+        else:
+            advice = f"Most news is neutral for {company}, so I'm uncertain about investing right now."
+
+        # --- Optionally: show sample headlines and sentiments
+        response_text = advice + "\n\nSample headlines and their sentiment:\n"
+        for i, (headline, sentiment) in enumerate(headline_sentiments, 1):
+            response_text += f"{i}. {headline} [{sentiment}]\n"
+
+        dispatcher.utter_message(text=response_text)
         return []
 

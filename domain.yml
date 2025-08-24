@@ -9,6 +9,7 @@ intents:
   - stock_advice
   - bot_capabilities
   - company_info
+  - direct_stock_action
 
 entities:
   - company
@@ -58,6 +59,7 @@ responses:
 actions:
   - action_stock_advice
   - action_give_company_info
+  - action_direct_stock_action
 
 session_config:
   session_expiration_time: 60

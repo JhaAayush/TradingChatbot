@@ -86,35 +86,19 @@ nlu:
 - intent: stock_advice
   examples: |
     - What stocks should I invest in?
-    - Do you have any advice on which stocks to buy?
-    - What companies should I avoid investing in right now?
-    - Should I buy or sell [Tesla](company)?
-    - Tell me which stocks have a positive outlook.
-    - What's your recommendation for my portfolio?
-    - Give me some stock market advice.
-    - Which companies are looking bad right now?
-    - What's the best stock to buy today?
-    - Do you think I should sell my shares in [Nvidia](company)?
-    - Can you give me a list of companies to consider for investment?
-    - Based on the news, which stocks are performing well?
-    - What's the general sentiment on the market?
-    - Which companies have a negative sentiment?
-    - Suggest some companies for me to invest in.
-    - I want to know which stocks to sell.
-    - What is the current sentiment for [Reliance](company)?
-    - Is it a good time to buy [Google](company) stock?
-    - What are some good investment opportunities?
-    - Can you tell me which companies are currently not worth investing in?
-    - Any suggestions for stock trading?
-    - What's the word on the street about [Apple](company)?
-    - Give me some investment tips.
-    - Which stocks are trending positively?
-    - Help me decide whether to invest in [Microsoft](company).
-    - What's a good company to put my money into?
-    - Should I be concerned about my [Adani](company) stock?
-    - Is the market bullish or bearish right now?
-    - Give me some advice on what to do with my stocks.
-    - I'm looking for a company to invest in with a positive outlook.
+    - Can you recommend some companies with a positive outlook?
+    - Which stocks are good to invest in at the moment?
+    - What are the top companies to invest in?
+    - Are there any stocks performing well right now?
+    - What are some good investment opportunities in the market?
+    - Could you suggest some stocks for my portfolio?
+    - Where should I invest today?
+    - Which companies have strong sentiment and are worth investing in?
+    - Who are the winners in the market recently?
+    - What companies look good for investment based on news?
+    - Which stocks would you suggest for new investors?
+    - Which stocks are trending positively right now?
+    - Give me some stock investment ideas.
 
 - intent: company_info
   examples: |
@@ -138,3 +122,27 @@ nlu:
     - Tell me about [Jio](company).
     - What's [Ola](company]'s main business?
     - Can you tell me more about [Nvidia](company)?
+
+
+- intent: direct_stock_action
+  examples: |
+    - Can I invest in [Tesla](company)?
+    - Should I buy or sell [Google](company)?
+    - Is it a good idea to buy [Nvidia](company)?
+    - What do you think about investing in [Reliance](company)?
+    - Should I sell my [Microsoft](company) shares?
+    - Is [Apple](company) a good investment right now?
+    - Do you recommend buying [Amazon](company) stock?
+    - Should I hold on to my [Meta](company) stock?
+    - Is it a good time to sell [Netflix](company)?
+    - What's your advice on buying [Twitter](company) stock?
+    - Should I put my money into [Jio](company)?
+    - Is it a bad time to sell [SBI](company) stock?
+    - Do you advise me to buy [ICICI](company) shares?
+    - What should I do with my [Infosys](company) stock?
+    - Is [Wipro](company] a buy or a sell?
+    - Should I invest in [HCL](company) or not?
+    - Is it smart to invest in [TCS](company)?
+    - Do you think I should sell my [Paytm](company) stock?
+    - What's your take on buying [Flipkart](company)?
+    - Should I purchase shares of [Ola](company)?
