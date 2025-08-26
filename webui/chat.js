@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- RASA SERVER CONNECTION ---
     // Replace with your Rasa server URL
-    const RASA_SERVER_URL = 'http://localhost:5005/webhooks/rest/webhook';
+    const RASA_SERVER_URL = "https://024fc57e1b9d.ngrok-free.app/webhooks/rest/webhook";
 
     // Function to send a message to the Rasa server
     async function sendMessageToRasa(message) {
